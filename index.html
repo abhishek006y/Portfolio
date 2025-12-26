@@ -55,6 +55,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
         }
         
         .logo {
@@ -182,7 +183,7 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
         
-        /* About Section */
+        /* Section General Styles */
         section {
             padding: 6rem 0;
         }
@@ -198,6 +199,7 @@
             color: var(--primary-color);
         }
         
+        /* About Section */
         .about-content {
             display: flex;
             align-items: center;
@@ -228,6 +230,64 @@
             margin-bottom: 1.5rem;
             color: var(--secondary-color);
         }
+
+        /* Certificate Section (New Styles) */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .certificate-card {
+            background-color: #f8fafc; /* light gray background */
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .certificate-info {
+            padding: 1.5rem;
+        }
+
+        .certificate-info h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-info p {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .certificate-link a {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .certificate-link a:hover {
+            text-decoration: underline;
+        }
+
+        .certificate-link i {
+            margin-left: 0.5rem;
+        }
         
         /* Skills Section */
         .skills-container {
@@ -249,6 +309,7 @@
             border-radius: 10px;
             text-align: center;
             transition: var(--transition);
+            border: 1px solid #e2e8f0;
         }
         
         .skill-card:hover {
@@ -330,7 +391,7 @@
         }
         
         .project-tag {
-            background-color: var(--light-color);
+            background-color: #e0e7ff; /* Lighter primary color for tags */
             color: var(--primary-color);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -387,11 +448,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--light-color);
+            background-color: #e0e7ff; /* Lighter primary color */
             color: var(--primary-color);
             border-radius: 50%;
             font-size: 1.2rem;
         }
+
         
         .info-text h3 {
             font-size: 1.2rem;
@@ -541,11 +603,9 @@
             }
         }
     </style>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
             <nav>
@@ -553,6 +613,7 @@
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#certificate">Certificates</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -564,7 +625,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -580,29 +640,76 @@
                     </div>
                 </div>
                 <div class="hero-img">
-                    <img src="#" alt="" />
-                </div>
+                    
+                <img src="abhishek_pic.png" alt="Abhishek Yadav portrait" /> 
+               </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="certificate" class="section">
+    <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About <span> Me</span></h2>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="#"
+                    <img src="abhishek_pic.png" alt="Abhishek Yadav portrait" /> 
                 </div>
                 <div class="about-text">
-                    <h4>I'm a Web Developer </h4>
+                    <h3>I'm a Passionate <span>Web Developer</span></h3>
+                    <p>
+                        I'm **Abhishek Yadav**, a dedicated developer with a focus on building robust, scalable, and user-friendly web applications. My expertise lies in front-end development using **HTML5, CSS3, and JavaScript**, coupled with back-end knowledge in **Python** and practical experience with various **database systems**.
+                    </p>
+                    <p>
+                        I thrive on turning complex problems into simple, beautiful, and intuitive solutions. I am committed to continuous learning and always look for opportunities to apply the latest technologies to deliver high-quality digital experiences. Let's build something amazing together!
+                    </p>
                     <a href="#" class="btn">Download CV</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <section id="certificate" class="section">
+        <div class="container">
+            <h2 class="section-title">My <span>Certificates</span></h2>
+            <div class="certificates-grid">
+                
+                <div class="certificate-card">
+                    <img src="https://via.placeholder.com/600x400.png?text=Web+Dev+Certificate+Image" alt="Web Development Course Certificate" />
+                    <div class="certificate-info">
+                        <h3>Full Stack Web Development</h3>
+                        <p>Completed comprehensive training in front-end and back-end web technologies.</p>
+                        <div class="certificate-link">
+                            <a href="#" target="_blank">View Credential <i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <a href="file:///C:/Users/abhis/Downloads/Coursera%20certificate.pdf" target="_blank">here</a> to open the PDF file.</p>
+                    <img src="https://via.placeholder.com/600x400.png?text=Python+Certificate+Image" alt="Python Programming Course Certificate" />
+                    <div class="certificate-info">
+                        <h3>Advanced Python Programming</h3>
+                        <p>Mastered core Python concepts, data structures, and object-oriented programming.</p>
+                        <div class="certificate-link">
+                            <a href="#" target="_blank">View Credential <i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="file:///C:/Users/abhis//Downloads/Desktop/coursera certificate.pdf" alt="Database Management Certificate" />
+                    <div class="certificate-info">
+                        <h3>Database Management & SQL</h3>
+                        <p>Proficiency in database design, normalization, and complex SQL querying.</p>
+                        <div class="certificate-link">
+                            <a href="#" target="_blank">View Credential <i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title">My <span>Skills</span></h2>
@@ -611,52 +718,44 @@
                     <div class="skill-card">
                         <i class="fab fa-html5"></i>
                         <h3>HTML5</h3>
-
                     </div>
                     <div class="skill-card">
                         <i class="fab fa-css3-alt"></i>
                         <h3>CSS3</h3>
-                        
                     </div>
                     <div class="skill-card">
                         <i class="fab fa-js"></i>
                         <h3>JavaScript</h3>
-
                     </div>
                     <div class="skill-card">
                         <i class="fab fa-python"></i>
                         <h3>python</h3>
-                        
                     </div>
-                              <div class="skill-card">
+                    <div class="skill-card">
                         <i class="fas fa-database"></i>
                         <h3>Databases</h3>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">My <span>Projects</span></h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-img">
                         <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/56880337-5505-45ac-a8eb-0b9e7d153efa.png" alt="E-commerce application dashboard showing product listings and analytics" />
                     </div>
                     <div class="project-info">
                         <h3>E-Commerce Platform</h3>
-                        
-                                               
-                            <div class="project-tags">
-                            <span class="project-tag"></span>
-                            <span class="project-tag"></span>
-                            <span class="project-tag"></span>
-                            <span class="project-tag"></span>
+                        <p>A fully responsive e-commerce application featuring product browsing, shopping cart functionality, and user authentication.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Database</span>
                         </div>
                         <div class="project-links">
                             <a href="github.com/abhishek006y/smartwatch-website"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -665,10 +764,6 @@
                     </div>
                 </div>
                 
-             
-
-                
-             <!--   Project 2 -->
                 <div class="project-card">
                     <div class="project-img">
                         <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1b5b5d5e-d1a0-47a3-8589-2e89c4c1ee67.png" alt="Portfolio website showcase with multiple section layouts" />
@@ -691,7 +786,6 @@
         </div>
     </section>
 
-   <!-- Contact Section-->
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Get In <span>Touch</span></h2>
@@ -744,7 +838,6 @@
         </div>
     </section>
 
-     <!--Footer-->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -759,8 +852,7 @@
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript -->
+                      
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -808,4 +900,3 @@
     </script>
 </body>
 </html>
-
